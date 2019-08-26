@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 
+	"github.com/karcatamas/restapi/data"
 	"github.com/karcatamas/restapi/handlers"
 
 	"net/http"
@@ -14,6 +15,7 @@ func main() {
 	// Init router
 	r := mux.NewRouter()
 	handlers.Load()
+	data.Connect()
 
 	// Route Handlers / Endpoint
 	r.HandleFunc("/api/books", handlers.GetBooks).Methods("GET")

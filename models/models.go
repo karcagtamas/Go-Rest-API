@@ -13,3 +13,9 @@ type Author struct {
 	Firstname string `json:"firstname"`
 	Lastname  string `json:"lastname"`
 }
+
+type Role struct {
+	ID          int    `json:"id"`
+	Name        string `json:"name"`
+	AccessLevel byte   `json:"accessLevel"`
+}
